@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { ShopContext } from "../context/ShopContext"
-import Title from './Title';
+import Title from './Title1';
 import ProductItem from './ProductItem';
 
 const LatestCollection = () => {
@@ -27,7 +27,7 @@ const LatestCollection = () => {
 
             {
               latestProducts.map((item,index)=>(
-                <ProductItem key={index} id={item.id} image={item.image} name={item.name} price={item.price}/>
+                <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price}/>
               ))
             }
 

@@ -14,8 +14,8 @@ const ProductItem = ({id, image, name, price}) => {
                     alt={name}
                 />
             </div>
-            <p className='pt-3 pb-1 text-sm'>{name}</p>
-            <p className='text-sm font-medium'>{currency}{price}</p>
+            <p className='zalando-sans-second pt-3 pb-1 text-sm'>{name}</p>
+            <p className='zalando-sans-second text-sm font-medium'>{currency}{price}</p>
         </Link>
     )
 }

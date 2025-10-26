@@ -3,14 +3,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import "tailwindcss";
+
+
+.nunito-sans-1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 200,
+    "YTLC" 800;
+}
+.noto-sans-mono-1 {
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.nixie-one-regular {
+  font-family: "Nixie One", system-ui;
+  font-weight: 600;
+  font-style: normal;
+}
 
 a.active hr{
     display:block;
 }
 
 *{
-    font-family: Outfit;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
     margin-left: 2px;
     margin-right: 2px;
 }
@@ -33,6 +68,10 @@ a.active hr{
   font-style: normal;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 @media(max-width:640px){
   a.active{
     background-color: black;
@@ -48,9 +87,21 @@ a.active hr{
 }
 .julius-sans-one-heavy {
   font-family: "Julius Sans One", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  font-style: normal;
+  font-size:17px;
+}
+.julius-sans-one-mid {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size:14px;
+}
+.julius-sans-one-new {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size:20px;
 }
 
 .zalando-sans-first {
@@ -68,5 +119,13 @@ a.active hr{
   font-style: normal;
 
 }
+
+.red-hat-display-regular {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 
 
