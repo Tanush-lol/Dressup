@@ -96,23 +96,24 @@ const ShopContextProvider = (props) => {
     }
 
     const getCartAmount = () => {
-        let totalAmount=0;
-        for(const items in cartItems){
-            let itemInfo = products.find((product) => product._id === items);
-            for (const size in cartItems[items]) {
-                try {
-                    const quantity = Number(cartItems[items][size]) || 0;
-                    if (quantity > 0) {
-                        totalAmount += itemInfo.price * quantity;
-                    }
-                } catch (error) {
-                    console.log(error);
-                    toast.error(error.message)
-                }
-            }
+  let totalAmount = 0;
+  for (const items in cartItems) {
+    let itemInfo = products.find(product => product._id === items);
+    for (const size in cartItems[items]) {
+      try {
+        const quantity = Number(cartItems[items][size]) || 0;
+        if (itemInfo && quantity > 0) {
+          totalAmount += itemInfo.price * quantity;
         }
-        return totalAmount;
+      } catch (error) {
+        console.log(error);
+        toast.error(error.message);
+      }
     }
+  }
+  return totalAmount;
+}
+
 
     const getProductData = async () => {
         try {
@@ -162,7 +163,7 @@ const ShopContextProvider = (props) => {
     const value = {
         products,currency,delivery_fee,
         search,setSearch,
-        showSearch,setShowSearch,cartItems,setCartItems,Add2Cart
+        showSearch,setShowSearch,cartItems,setCartItems,Add2Cart,setCartItems
         ,getCartCount,updateQuantity,getCartAmount,navigate,backendUrl,
         setToken,token
     }
